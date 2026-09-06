@@ -1,6 +1,8 @@
 # Hodge-Conjecture
 
-![Agda CI](https://github.com/AccessNotEssence/Hodge-Conjecture/actions/workflows/agda.yml/badge.svg)
+![Agda CI](https://github.com/AccessNotEssence/Hodge-Conjecture/actions/workflows/agda.yml/badge.svg?branch=main)
+![Language](https://img.shields.io/badge/Language-Cubical_Agda-blue)
+![Theory](https://img.shields.io/badge/Theory-HoTT-purple)
 
 ## Log Entry: 23 | [Observation Log] David 8 - A Question
 
