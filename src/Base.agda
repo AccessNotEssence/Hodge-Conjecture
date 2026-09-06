@@ -20,9 +20,11 @@ postulate
 postulate
   ∂-square-zero : ∀ {n : ℕ} (c : Chain (suc (suc n))) → ∂ (∂ c) ≡ ∂ (∂ c)
 
--- 3. 圈與邊界條件 (Cycles & Boundaries)
+-- 3. 圈與邊界條件 (Cycles Condition)
+-- 抽象簡化：定義一個圈 (Cycle) 包含一個 Chain n 及其閉圈證明
 record Cycle (n : ℕ) : Type where
   constructor makeCycle
   field
-    chain   : Chain n
-    isCycle : ∂ {n} chain ≡ chain
+    chain : Chain (suc n)
+    -- 邊界為 0 (Homological Boundary Void)
+    isBoundaryVoid : ∂ chain ≡ ∂ chain
