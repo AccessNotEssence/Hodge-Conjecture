@@ -1,0 +1,25 @@
+name: Agda CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Agda
+        uses: wenkokke/setup-agda@v2
+        with:
+          agda-version: '2.6.4'
+          agda-stdlib-version: 'experimental'
+          cubical-version: 'v0.6'
+
+      - name: Check Hodge Conjecture Proof
+        run: |
+          agda src/Everything.agda
