@@ -17,7 +17,6 @@ jobs:
         uses: wenkokke/setup-agda@v2
         with:
           agda-version: '2.6.4.1'
-          agda-stdlib-version: 'v2.0'
 
       - name: Checkout Cubical Library
         uses: actions/checkout@v3
