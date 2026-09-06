@@ -16,9 +16,21 @@ jobs:
       - name: Setup Agda
         uses: wenkokke/setup-agda@v2
         with:
-          agda-version: '2.6.4'
-          agda-stdlib-version: 'experimental'
-          cubical-version: 'v0.6'
+          agda-version: '2.6.4.1'
+          agda-stdlib-version: 'v2.0'
+
+      - name: Checkout Cubical Library
+        uses: actions/checkout@v3
+        with:
+          repository: agda/cubical
+          ref: v0.6
+          path: cubical-lib
+
+      - name: Register Cubical Library
+        run: |
+          mkdir -p ~/.agda
+          echo "$GITHUB_WORKSPACE/cubical-lib/cubical.agda-lib" >> ~/.agda/libraries
+          echo "cubical" >> ~/.agda/defaults
 
       - name: Check Hodge Conjecture Proof
         run: |
