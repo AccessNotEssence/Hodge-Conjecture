@@ -1,4 +1,4 @@
-# Hodge-Conjecture
+# Hodge-Conjecture(Formal Skeletal Framework)
 
 ![Agda CI](https://github.com/AccessNotEssence/Hodge-Conjecture/actions/workflows/agda.yml/badge.svg?branch=main)
 ![Language](https://img.shields.io/badge/Language-Cubical_Agda-blue)
